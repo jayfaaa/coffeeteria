@@ -4,7 +4,7 @@
 <center>
 	<h4 style="margin-top: 2%;">  Register </h4>
 	<div style="margin-top: 2%; width: 40%; background-color: rgb(49,49,49); color: rgb(235,235,235); padding: 2% 5% 2% 5%; border-radius: 5%;">
-		<form action="<?php echo base_url('register_user');?>" id="userform" method="POST">
+		<form action="<?php echo base_url('register_user');?>" method="POST">
 		  <div class="form-group">
 		    <label for="fname">First Name</label>
 		    <input type="text" class="form-control" placeholder="Enter First Name" name="fname">
@@ -22,10 +22,8 @@
 		    <label for="password">Password</label>
 		    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
 		  </div>
-		  <input type="submit" class="btn btn-primary" value="Register">
+		  <input type="submit" class="btn btn-primary" placeholder="Register">
 		</form>
 	</div>
-	<script src="<?php echo base_url('assets/js/jquery-3.3.1.min.js'); ?>"></script>
-	<script src="<?php echo base_url('assets/js/test.js'); ?>" ></script>
 </center>
 <br><br><br>

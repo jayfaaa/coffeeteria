@@ -18,7 +18,6 @@ $(document).ready(function(){
 			error: function(err){
 				var errors  =  JSON.parse(err.responseText)
 				
-			}
 		})
 	})
 

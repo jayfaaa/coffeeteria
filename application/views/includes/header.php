@@ -10,4 +10,4 @@
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap.js"></script>
     <title>Coffeeteria</title>
 </head>
-<body>
+<body style="height: 100%;">

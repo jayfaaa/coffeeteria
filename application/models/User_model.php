@@ -2,18 +2,17 @@
 
 	class User_model extends CI_Model {
 
+		public function __construct(){
+			$this->load->database();
+		}
 
 		public function save($data){
-
-
 			$this->db->insert('users_t',$data);
 			return $this->db->affected_rows();
-
 		}
 
 
 		public function update_email($id,$data) {
-
 			$this->db->where('id', $id);
 			$this->db->update('users_t', $data);
 		}
@@ -24,9 +23,29 @@
 			return $query->num_rows();
 		}
 
+		public function check_email_admin($email){
+			$this->db->where('email',$email);
+			$query = $this->db->get('admin_t');
+			return $query->num_rows();
+		}
+
 		public function check_valid($email,$password){
 			$this->db->select('password');
 			$this->db->from('users_t');
+			$this->db->where('email', $email);
+			$query = $this->db->get();
+			$original = "";
+			foreach ($query->result() as $row)
+			{
+			        $original = $row->password;
+			}
+			$valid = password_verify($password, $original);
+			return $valid;
+		}
+
+		public function check_admin($email,$password){
+			$this->db->select('password');
+			$this->db->from('admin_t');
 			$this->db->where('email', $email);
 			$query = $this->db->get();
 			$original = "";

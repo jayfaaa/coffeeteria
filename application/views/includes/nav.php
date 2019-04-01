@@ -10,7 +10,7 @@
         <a class="nav-link" href="<?php echo base_url('blogs');?>" style="color: rgb(235,235,235); font-size: 100%; margin-left: 50%">BROWSE</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('blogs');?>" style="color: rgb(235,235,235); font-size: 100%; margin-left: 50%">UPDATES</a>
+        <a class="nav-link" href="<?php echo base_url('admin');?>" style="color: rgb(235,235,235); font-size: 100%; margin-left: 50%">UPDATES</a>
       </li>
     </ul>
   <?php if (!(isset($_SESSION['logged_in']))) { ?>
@@ -23,7 +23,7 @@
                   <p style="text-align:center "> Log in </p>
                   <input style="border-radius:10px; margin-bottom: 10px;" type="text" name="email" placeholder="Email"><br>
                   <input style="border-radius:10px; margin-bottom: 10px;" type="password" name="password" placeholder="Password"><br>
-                  <input type="submit" class="btn btn-secondary" class="btn btn-secondary" value="Login">
+                  <input type="submit" class="btn btn-secondary" value="Login">
                   </form>
                   <a href="<?php echo base_url('users');?>">Register</a>
                 </center>
@@ -55,8 +55,9 @@
   </div>
   </div>
 </nav>
+
+<script src="<?php echo base_url('assets/js/test.js'); ?>" ></script>
 <script src="<?php echo base_url('assets/js/jquery-3.3.1.min.js'); ?>"></script>
-  <script src="<?php echo base_url('assets/j/test.js'); ?>" ></script>
 <script>
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */

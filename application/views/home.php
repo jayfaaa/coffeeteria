@@ -1,12 +1,19 @@
+<?php if($this->session->flashdata('error')) { ?>
+    <div class="alert alert-danger">
+        <strong>Error!</strong> 
+        <?php echo $this->session->flashdata('error'); ?>
+    </div>
+<?php } ?>
+<div style="width: 100%;z-index: 1;">
 
-<center><div style="width: 70%; margin-top: 10px;">
+<center>
+<div style="width: 70%; margin-top: 10px; ">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-  </ol>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -30,14 +37,22 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+
 </div>
-</div>
-<div>
-<ol class="carousel-indicators" style="padding-top: -6%;">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" style="margin-left: 1000px; margin-top: -130px;"><img src="<?php echo base_url();?>assets/images/s1.png"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active" style="margin-left: 160px; margin-top: -130px;"><img src="<?php echo base_url();?>assets/images/s2.png"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2" class="active" style="margin-left: 160px; margin-top: -130px;"><img src="<?php echo base_url();?>assets/images/s3.png"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="3" class="active" style="margin-left: 160px; margin-top: -130px;"><img src="<?php echo base_url();?>assets/images/s4.png"></li>
- </ol>
+
+<ul class="carousel-indicators" >
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" style="margin-left: 1000px; margin-top: -200px;"><img src="<?php echo base_url();?>assets/images/s1.png"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active" style="margin-left: 160px; margin-top: -200px;"><img src="<?php echo base_url();?>assets/images/s2.png"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2" class="active" style="margin-left: 160px; margin-top: -200px;"><img src="<?php echo base_url();?>assets/images/s3.png"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3" class="active" style="margin-left: 160px; margin-top: -200px;"><img src="<?php echo base_url();?>assets/images/s4.png"></li>
+ </ul>
+
 </div>
 </center>
+</div>
+<br>
+<br>
+<br>
+
+
+

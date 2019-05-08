@@ -1,5 +1,40 @@
-
-
+<?php if($this->session->flashdata('success_add_blog')) { ?>
+    <div class="alert alert-success">
+        <strong>Success!</strong> <?php echo $this->session->flashdata('success_add_blog'); ?>
+    </div>
+  <?php } ?>
+  <?php if($this->session->flashdata('error_add_blog')) { ?>
+    <div class="alert alert-danger">
+        <strong>Error!</strong> 
+        <?php echo $this->session->flashdata('error_add_blog'); ?>
+    </div>
+<?php } ?>
+<?php if($this->session->flashdata('success_edit_blog')) { ?>
+    <div class="alert alert-success">
+        <strong>Success!</strong> <?php echo $this->session->flashdata('success_edit_blog'); ?>
+    </div>
+  <?php } ?>
+  <?php if($this->session->flashdata('error_edit_blog')) { ?>
+    <div class="alert alert-danger">
+        <strong>Error!</strong> 
+        <?php echo $this->session->flashdata('error_edit_blog'); ?>
+    </div>
+<?php } ?>
+<div style="float: right; right: 0; position: sticky; margin-right: -20%; margin-top: -5%; "><h4>
+  <a style="text-decoration: none; color: black;" href="#">JANUARY<br><br></a>
+  <a style="text-decoration: none; color: black;" href="#">FEBRUARY<br><br></a>
+  <a style="text-decoration: none; color: black;" href="#">MARCH<br><br></a>
+  <a style="text-decoration: none; color: black;" href="#">APRIL<br><br></a>
+  <a style="text-decoration: none; color: black;" href="#">MAY<br><br></a>
+  <a style="text-decoration: none; color: black;" href="#">JUNE<br><br></a>
+  <a style="text-decoration: none; color: black;" href="#">JULY<br><br></a>
+  <a style="text-decoration: none; color: black;" href="#">AUGUST<br><br></a>
+  <a style="text-decoration: none; color: black;" href="#">SEPTEMBER<br><br></a>
+  <a style="text-decoration: none; color: black;" href="#">OCTOBER<br><br></a>
+  <a style="text-decoration: none; color: black;" href="#">NOVEMBER<br><br></a>
+  <a style="text-decoration: none; color: black;" href="#">DECEMBER<br><br></a>
+</h4>
+  </div>
 <?php foreach($posts as $post): ;?>
 <br>
 <div style="width: 100%; float: left; margin-bottom: 5%;">
@@ -22,26 +57,3 @@
 </div>
 
 <?php endforeach; ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

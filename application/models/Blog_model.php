@@ -12,6 +12,24 @@
 
 		}
 
+		public function save_report($data){
+			$this->db->insert('reports_t',$data);
+			return $this->db->affected_rows();
+		}
+
+		public function fetchYear($year) {
+			$this->db->like('date',$year);
+			$result = $this->db->get('blogs_t');
+			return $result->result_array();
+		}
+
+		public function getAllReport(){
+			$this->db->order_by('date','desc');
+			$result = $this->db->get('reports_t');
+			return $result->result_array();
+		}
+
+
 		public function update($id,$data){
 			 
   			 
@@ -42,6 +60,7 @@
 		}
 
 		public function getAll() {
+			$this->db->order_by('date','desc');
 			$result = $this->db->get('blogs_t');
 			return $result->result_array();
 		}

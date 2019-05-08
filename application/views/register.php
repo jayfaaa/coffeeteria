@@ -2,6 +2,17 @@
 		session_destroy();
 		?>
 <center>
+	<?php if($this->session->flashdata('success')) { ?>
+		<div class="alert alert-success">
+  			<strong>Success!</strong> You are successfully registered!
+		</div>
+	<?php } ?>
+	<?php if($this->session->flashdata('error')) { ?>
+		<div class="alert alert-danger">
+  			<strong>Error!</strong> 
+  			<?php echo $this->session->flashdata('error'); ?>
+		</div>
+	<?php } ?>
 	<h4 style="margin-top: 2%;">  Register </h4>
 	<div style="margin-top: 2%; width: 40%; background-color: rgb(49,49,49); color: rgb(235,235,235); padding: 2% 5% 2% 5%; border-radius: 5%;">
 		<form action="<?php echo base_url('register_user');?>" method="POST">
